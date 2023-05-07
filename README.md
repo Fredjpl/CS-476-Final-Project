@@ -1,4 +1,4 @@
-# CS-476-Final-Project
+# CS-476-Final-Project: Impact of Sleep on Memory
 
 ## Introduction
 Memory is essential for daily life and success in academic and professional settings. Poor sleep quality can impair memory consolidation, affecting performance on memory-related tasks. Understanding this relationship can also have implications for public health, as sleep disturbances are linked to cognitive decline and other health problems. Investigating the mechanisms underlying sleep-related memory consolidation can improve our understanding of human cognition and lead to strategies to enhance memory performance and overall quality of life.
