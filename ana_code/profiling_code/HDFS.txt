@@ -1,0 +1,12 @@
+Create a directory to store cleaned data:
+
+hdfs dfs -mkdir formatted_data
+
+Put cleaned data into HDFS:
+
+hdfs dfs -put Formatted_Data.csv formatted_data
+
+Check data in my created directory:
+
+hdfs dfs -ls formatted_data
+

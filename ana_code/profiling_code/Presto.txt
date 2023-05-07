@@ -1,0 +1,23 @@
+Count the number of data in table:
+
+SELECT COUNT(*) as cnt FROM hive.pj2097_nyu_edu.cleaned_data;
+
+Show People's average PSQI score who made correct identification:
+
+SELECT identification, AVG(psqi) FROM hive.pj2097_nyu_edu.cleaned_data GROUP BY identification;
+
+Show People's average PSQI score grouped by different level of confidence:
+
+SELECT confidence, AVG(psqi) FROM hive.pj2097_nyu_edu.cleaned_data GROUP BY confidence ORDER BY confidence DESC;
+
+Show People's average PSQI score grouped by different chronotypes:
+
+SELECT meq, AVG(psqi) FROM hive.pj2097_nyu_edu.cleaned_data GROUP BY meq;
+
+Show People's average weekly_avg_sleep time grouped by identification:
+
+SELECT identification, AVG(weekly_avg_sleep) FROM hive.pj2097_nyu_edu.cleaned_data GROUP BY identification;
+
+Show People's average sleep time before encoding grouped by identification:
+
+SELECT identification, AVG(sleep_before_encoding) FROM hive.pj2097_nyu_edu.cleaned_data GROUP BY identification;

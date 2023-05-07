@@ -1,0 +1,17 @@
+Create a directory to store source data:
+
+hdfs dfs -mkdir source_data
+
+Upload data into Dataproc and then put into HDFS:
+
+hdfs dfs -put Data.csv source_data
+
+Check data in my created directory:
+
+hdfs dfs -ls source_data
+
+Provide access to my HDFS:
+
+hdfs dfs -setfacl -m user:adm209_nyu_edu:rwx /user/pj2097_nyu_edu
+hdfs dfs -setfacl -m user:cr3152_nyu_edu:rwx /user/pj2097_nyu_edu
+hdfs dfs -setfacl -m user:cl6405_nyu_edu:rwx /user/pj2097_nyu_edu

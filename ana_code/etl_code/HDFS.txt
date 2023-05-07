@@ -1,0 +1,21 @@
+Complie MR java files:
+
+javac -classpath opencsv-5.7.1.jar:`yarn classpath` -d . FormatReducer.java
+javac -classpath opencsv-5.7.1.jar:`yarn classpath` -d . FormatMapper.java
+javac -classpath opencsv-5.7.1.jar:`yarn classpath`:. -d . Format.java
+
+Create a jar file:
+
+jar -cvf Format.jar *.class
+
+Run MR job in HDFS and stored the output in a directory named cleaned_data:
+
+hadoop jar Format.jar Format source_data/Data.csv cleaned_data
+
+Show cleaned data:
+
+hdfs dfs -cat cleaned_data/part-r-00000
+
+Save cleaned data as "Formatted_Data.csv" and download it from Dataproc:
+
+hdfs dfs -cat cleaned_data/part-r-00000 > Formatted_Data.csv

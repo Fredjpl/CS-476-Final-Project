@@ -1,0 +1,16 @@
+Create table in Hive:
+
+CREATE EXTERNAL TABLE data(subject STRING, condition STRING, lineup STRING, identification STRING, confidence INT, 
+meq STRING, ospan INT, psqi INT, s1_sss INT, s2_sss INT, s1_positive INT, s1_negative INT, s2_positive INT, s2_negative INT, 
+weekly_avg_sleep DOUBLE, sleep_before_encoding INT, sleep_before_test INT, minutes_awake_after_encoding INT) 
+    ROW FORMAT DELIMITED 
+    FIELDS TERMINATED BY ','
+    LINES TERMINATED BY '\n' 
+    STORED AS TEXTFILE 
+    LOCATION  'hdfs://nyu-dataproc-m/user/pj2097_nyu_edu/source_data'
+    TBLPROPERTIES ('skip.header.line.count'='1');
+
+Descrive table in Hive:
+
+describe data;
+

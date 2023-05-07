@@ -1,0 +1,5 @@
+Count the number of data in table:
+
+SELECT COUNT(*) as cnt
+FROM hive.pj2097_nyu_edu.data;
+
